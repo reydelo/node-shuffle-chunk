@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
 router.post('/submit', function(req, res, next) {
   var people = req.body.people.replace(/,/g, '').split(' ');
   var number = req.body.number
-  res.send(logic.shuffleChunk(people, number));
+  var results = logic.shuffleChunk(people, number);
+  res.render('index', { title: "Shuffle Chunk", results: results});
 });
 
 module.exports = router;
