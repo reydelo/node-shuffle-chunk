@@ -26,6 +26,8 @@ function shuffleChunk(inputArray, num) {
   return chunk(shuffledArray, num);
 }
 
-var inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
-console.log(shuffleChunk(inputArray, 4));
+module.exports = {
+  shuffleChunk: shuffleChunk,
+  chunk: chunk,
+  shuffle: shuffle
+};
